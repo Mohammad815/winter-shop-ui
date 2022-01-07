@@ -6,12 +6,6 @@ import './Products.css'
 import { getProducts } from '../../../redux/slices/winterSlice';
 
 const Products = () => {
-    // const [products, setproducts] = useState([]);
-    // useEffect(() => {
-    //   fetch("http://localhost:5000/allProducts")
-    //     .then((res) => res.json())
-    //     .then((data) => setproducts(data));
-    // }, []);
     
     // const toyProduct = products.slice(0, 6)
    
@@ -24,7 +18,7 @@ const Products = () => {
 
     return (
         <div>
-      <h2 className="text-info mt-5 mb-4">Trending Product</h2>
+      <h2 className="text-info mt-5 mb-4 text-center">Trending Product</h2>
       <Container>
       <div className="services ">
         <div className="row container ">
