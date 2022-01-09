@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import { getProducts } from '../../../redux/slices/winterSlice';
 
 const Products = () => {
     
-    // const toyProduct = products.slice(0, 6)
+  // const toyProduct = products.slice(0, 6)
    
     const dispatch = useDispatch();
   const { users } = useSelector((state) => state.products);
@@ -17,25 +17,31 @@ const Products = () => {
   }, [dispatch]);   
 
     return (
-        <div>
-      <h2 className="text-info mt-5 mb-4 text-center">Trending Product</h2>
+        <div className='mt-5'>
+          <div className='text-center'>
+            <p className="display-4 text-center">Trending Product</p>
+            <h3 className=''>Contemporary, minimal and modern designs embody the Lavish Alice handwriting</h3>
+          </div>
       <Container>
       <div className="services ">
         <div className="row container ">
           {(users)?.map((pd, index) => (
             <div className="col-md-6 col-lg-4 toy-img mb-3">
               
-              <Card>
+              <Card className='h-100'>
                    <Card.Img variant="top" src={pd?.image} />
-                        <Card.Body>
-                        <h1>{pd.name}</h1>
-                            <p>{pd.description}</p>
-                            <p>{pd.price}</p>
-                            <Link to={`/products/${pd._id}`}>
-                              <button className="btn btn-info p-2 fs-5">Order Now</button>
-                            </Link>
+                        <Card.Body className=''>
+                        <h2>{pd.name}</h2>
+                            <p className='fs-5'>{pd.description}</p>
+                            <p className='fs-5'>{pd.price}</p>
+                            
                         </Card.Body>
-                    </Card>
+                        <Card.Footer>
+                        <Link className='common card-footer1' to={`/products/${pd._id}`}>
+                              <button className="button1 btn p-2 fs-3">Order Now</button>
+                            </Link>
+    </Card.Footer>
+              </Card>
             </div>
           ))}
         </div>

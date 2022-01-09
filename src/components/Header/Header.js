@@ -7,8 +7,8 @@ const Header = () => {
     return (
         <div>
             <Navbar bg="dark" class variant="dark">
-                <Container>
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                <Container className='main'>
+                <Navbar.Brand href="#home" className='header'>Winter</Navbar.Brand>
                 <nav
                 style={{
                 borderBottom: "solid 1px",
@@ -16,11 +16,12 @@ const Header = () => {
                 paddingTop: "1rem"
                 }}
                 >
-                    <Link to="/home">Home</Link>|{" "}
-                    <Link to="/about">About</Link>|{" "}
-                    <Link to="/contact">Contact</Link>|{" "}
-                    <Link to="/addproduct">AddProduct</Link>|{" "}
-                    <Link to="/login">Login</Link>
+                    <Link to="/home"className='header' >Home</Link>|{" "}
+                    <Link to="/about" className='header'>About</Link>|{" "}
+                    <Link to="/contact" className='header'>Contact</Link>|{" "}
+                    <Link to="/blog" className='header'>Blog</Link>|{" "}
+                    {/* <Link to="/addproduct" className='header'>AddProduct</Link>|{" "} */}
+                    <Link to="/login" className='header'>Login</Link>
                 </nav>
                 </Container>
             </Navbar>

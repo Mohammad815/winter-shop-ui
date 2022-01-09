@@ -1,0 +1,15 @@
+.header{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.header:hover{
+
+    color: tomato;
+  
+ 
+    text-decoration: underline;
+}
+.main{
+    padding: 2px;
+}
