@@ -38,7 +38,7 @@ const Products = () => {
                         </Card.Body>
                         <Card.Footer>
                         <Link className='common card-footer1' to={`/products/${pd._id}`}>
-                              <button className="button1 btn p-2 fs-3">Order Now</button>
+                              <button className="button1 bolder btn p-2 fs-3">Order Now</button>
                             </Link>
     </Card.Footer>
               </Card>

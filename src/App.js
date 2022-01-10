@@ -7,12 +7,10 @@ import Contact from './components/Contact/Contact';
 import About from './components/About/About';
 import AddProduct from './components/AddProduct/AddProduct';
 import Main from './components/HomeSection/WomenCollection/Main/Main';
-// import Clothing from './components/HomeSection/WomenCollection/Clothing'
-// import HandBag from './components/HomeSection/WomenCollection/HandBag'
-import Collection from './components/HomeSection/WomenCollection/Collection/Collection';
-import Clothing from './components/HomeSection/WomenCollection/Clothing/Clothing';
-import HandBag from './components/HomeSection/WomenCollection/HandBag/HandBag';
 import Details from './components/HomeSection/Details/Details';
+import Footer from './components/Footer/Footer';
+import Blog from './components/Blog/Blog';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -24,6 +22,8 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/addproduct" element={<AddProduct />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/main/*" element={<Main />}>
        
            {/* <Route path="cloth" element={<Clothing />} />
@@ -35,6 +35,7 @@ function App() {
         {/* <Route path="/login" element={<Login />} /> */}
       </Routes>
     </div>
+    <Footer></Footer>
   </BrowserRouter>
   );
 }

@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import { Button, Container, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 import './Header.css'
 
 const Header = () => {
+    const {user,logout} = useFirebase();
     return (
         <div>
             <Navbar bg="dark" class variant="dark">
@@ -21,7 +23,12 @@ const Header = () => {
                     <Link to="/contact" className='header'>Contact</Link>|{" "}
                     <Link to="/blog" className='header'>Blog</Link>|{" "}
                     {/* <Link to="/addproduct" className='header'>AddProduct</Link>|{" "} */}
-                    <Link to="/login" className='header'>Login</Link>
+                   
+                    {
+                        user?.email ? 
+                        <Button className="btn btn-info" onClick={logout} variant="light">Logout</Button> :
+                        <Link to="/login" className='header'>Login</Link>
+                    }
                 </nav>
                 </Container>
             </Navbar>

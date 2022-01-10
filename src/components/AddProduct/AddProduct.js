@@ -12,7 +12,7 @@ const AddProduct = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/AddProduct", {
+    fetch("https://glacial-dusk-25869.herokuapp.com/AddProduct", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

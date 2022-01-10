@@ -14,7 +14,7 @@ import {createSlice,createAsyncThunk} from "@reduxjs/toolkit";
 export const getProducts = createAsyncThunk(
   "products/getProducts",
   async (dispatch, getState) => {
-    return await fetch("http://localhost:5000/allProducts").then(
+    return await fetch("https://glacial-dusk-25869.herokuapp.com/allProducts").then(
       (res) => res.json()
     );
   }

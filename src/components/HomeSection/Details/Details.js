@@ -7,7 +7,7 @@ const Details = () => {
     const { productId } = useParams();
     const [product, setProdcut]=useState({})
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${productId}`)
+        fetch(`https://glacial-dusk-25869.herokuapp.com/singleProduct/${productId}`)
           .then((res) => res.json())
           .then((data) => setProdcut(data));
       }, []);
