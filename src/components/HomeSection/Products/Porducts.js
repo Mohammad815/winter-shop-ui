@@ -20,7 +20,7 @@ const Products = () => {
         <div className='mt-5'>
           <div className='text-center'>
             <p className="display-4 text-center">Trending Product</p>
-            <h3 className=''>Contemporary, minimal and modern designs embody the Lavish Alice handwriting</h3>
+            <h3>Contemporary, minimal and modern designs embody the Lavish Alice handwriting</h3>
           </div>
       <Container>
       <div className="services ">
@@ -38,7 +38,7 @@ const Products = () => {
                         </Card.Body>
                         <Card.Footer>
                         <Link className='common card-footer1' to={`/products/${pd._id}`}>
-                              <button className="button1 bolder btn p-2 fs-3">Order Now</button>
+                              <button className="button1 bolder btn p-1 fs-3">Order Now</button>
                             </Link>
     </Card.Footer>
               </Card>

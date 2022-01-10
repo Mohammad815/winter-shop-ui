@@ -14,8 +14,7 @@ const Header = () => {
                 <nav
                 style={{
                 borderBottom: "solid 1px",
-                paddingBottom: "1rem",
-                paddingTop: "1rem"
+              
                 }}
                 >
                     <Link to="/home"className='header' >Home</Link>|{" "}
